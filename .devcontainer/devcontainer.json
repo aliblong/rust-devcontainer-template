@@ -1,0 +1,23 @@
+{
+	"name": "Rust template project",
+	"image": "mcr.microsoft.com/devcontainers/rust:1-1-bookworm",
+	"mounts": [
+		"source=devcontainer-cargo-cache-${devcontainerId},target=/usr/local/cargo,type=volume",
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind",
+	],
+	"initializeCommand": ".devcontainer/dump-host-gitconfig.sh",
+	"postAttachCommand": ".devcontainer/hydrate-devcont-gitconfig.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"tamasfe.even-better-toml",
+				"aaron-bond.better-comments",
+				"ms-vscode-remote.remote-containers",
+				"usernamehw.errorlens",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"vadimcn.vscode-lldb",
+			],
+		},
+	},
+}
