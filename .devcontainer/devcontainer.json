@@ -20,4 +20,12 @@
 			],
 		},
 	},
+	"features": {
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "20",
+			"nodeGypDependencies": true,
+			"installYarnUsingApt": false
+		},
+	},
 }
